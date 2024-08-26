@@ -1,0 +1,474 @@
+<head>
+  <meta charset="UTF-8">
+  <title>study notes</title>
+  <!-- css/stylepractice.css -->
+  <link rel="stylesheet" href="CSS/style1.css">
+</head>
+
+<header class="main">
+<nav>
+  <a href="notes.html">HTML</a>
+  <a href="cssnote.html" class="active">CSS</a> 
+    <a href="javanote.html">Java Script</a>
+    <a href="TBD.html">Responsive Design</a>
+    <a href="python.html">Python</a>
+  </nav>
+</header>
+
+<header>
+  <h1>COURSE II: Into to CSS</h1>
+</header>
+
+<p>CSS: Cascading Style Sheets<br>
+</p><ul>
+  <li>Selector: a selector designates exactly which element with in HTML to target and apply styles
+    <ol>
+      <li>Type Selector: Target elements by their element type</li>
+      <li>Class Selector: Select an element based on the element's class attribute value</li>
+      <li>ID selector: more precise than class selectors, id attribute values can only be used once per page</li>
+    </ol>
+  </li>
+  <li>Property: a property determines the styles that will be applied to the element (such as: font-size, color)</li>
+  <li>Values: determine the behaviour of a property</li>
+</ul>
+<p></p>
+
+<h2>1. How To Make Style Work?</h2>
+
+<p>Internal Style Sheet: ONLY APPLICABLE FOR ONE SINGLE PAGE!!! Check the "head" section of this file!
+  Styling is defined within &lt;head&gt;<br>
+  e.g.  ADD THE FOLLOWING IN HEAD SECTION under the title tag <br> &lt;style&gt; <br>
+    h2{<br>
+      color: green;<br>
+    }<br>
+  &lt;/style&gt;
+Rules are defined within &lt;style&gt;, and styles are applied to all elements in that file<br>
+However, we use EXTERNAL STYLE SHEET, in a separate doc. 
+</p>
+
+<h2>2.What Is Cascading?</h2>
+<p>What if one selector is defined in two external files?
+  </p><ul><li>The rules from the most recent file have precedence (aka, the last one listed has the most precedence)</li></ul><br>
+  What if one Selector has more than one rule in the same file?
+  <ul><li>It will always use the last one added</li></ul><br><p></p>
+
+  <p><b>Override Rules!: The different values cascade between the options style attribute, internal rules, external rules, and browser default.  with the Style attribute in a tag override the Internal Styling i.e. rules specified in the &lt;head&gt; section</b></p>
+
+  <p>To override later rules: use "<b>!important</b>"</p>
+
+
+  
+<h2>3.Coding Colors</h2>
+<ul>Avoide using general color terms such as "green", "red", "blue". Instead, use:
+  <li>Hexadecimal (most common): #0000FF, #FF0000 </li>
+  <li>rgb: (0,0,1) </li>
+  <li>rgba ('a' stands for Alpha value of transparency): (0,1,0,5)
+</li></ul>
+
+<h2>4. Styling Fonts</h2>
+<p>Font-family<br>Font-Style: Normal, Italic, Oblique <br>Font-variant: normal, small-caps <br>Font-size: x-small, medium, xx-small, smaller BUT use Pixels/Percentages (100% is the defaut size) instead-more consistent</p>
+
+<br>
+<p>Color attribute: the colot of the foreground vs background, background-color covers the whole length of the page, in "span" it only cover the selected inline text</p>
+
+<br>
+<p>Text alignment: Left, Right, Center, Justify (spreaded-out)</p>
+<br>
+<p>Line-height: percentage</p>
+
+<h2>5. Display</h2>
+<h4>Types of Display</h4>
+<p>Inline: Sits next to other elements, takes up just enough width and height<br>
+Block: Forces line break (take up all horizontal width) - rules can set height and width <br>
+Inline-Block: Inline  but accept height and width adjustments<br>
+None: completely removed from page<br></p>
+<p>Complementary Properties: 
+  </p><ul>
+    <li>Float</li>
+    <ul>
+      <li>Repostion elements to the right or left</li>
+      <li>Elements are aware of one another and will not overlap.</li>
+      <li>Values: left, right</li>
+    </ul>
+    <li>Clear</li>
+    <ul>
+      <li>Used to keep floating elements away</li>
+      <li>Values: left, right, both</li>
+    </ul>
+  </ul>
+  <h4>Element Overflow: what if the content doesnt fit the width&amp; height?</h4>
+  <p>OVERFLOW
+    </p><ul>
+      <li>Visible: Can cause text to show up "on top" of other text</li>
+      <li>Hidden: Hides anything that goes beyond the box</li>
+      <li>Scroll: gives horizontal and vertical scrollbars</li>
+      <li>auto: add sccrollbar as needed</li>
+    </ul><p></p>
+
+ <h4>Other Display Values</h4>
+ New display properties, but too new, not always supported...
+ <ul>
+  <li><b>Table</b>: Very helpful. It creates a Table-like Layout without using table structure. Use display:table along with display:table-cell for elements</li>
+  <li>Grid</li>
+  <li>Flexbox</li>
+ </ul>
+
+  <h2>6. Box Model</h2>
+  <h5>Box Model</h5>
+  <p>Box Model helps with sizing and placing the element where you want them to go.（height and width)<br>Default width of inline elements is the content<br>Elements that are not inline can take width and height properties</p>
+  <h5>Border</h5>
+  <p>Any element can have a border around it (inline/block/inline-block)<br>border property specifies Style/width/color. The border style MUST be specified<br>BORDER-STYLE: None, dotted, dashed, solid, double, groove, ridge, inset, outset, hidden</p>
+
+  <p>CSS code: 
+    div{
+  border: solid 3px(pixel or thin, medium, large) #71BFBB;
+}
+<br>pixel value can be 1-4, the order of adding the pixel is: Top-R-Bottom-L
+</p>
+<p><b>Margin:</b>the space outside the border
+</p><ul>
+  <li>Positive Margin: element moves right/down</li>
+  <li>Negative Margin: element moves left/upward</li>
+</ul><p></p>
+<p><b>Padding:</b> additional space between the element and its border
+  </p><ul>
+    <li>Positive Padding: Border moves outward from the element</li>
+    <li>Negative Padding: CSS3 doesn't support negative padding</li>
+  </ul>
+  <p><b>Centering the Element</b>: To horizontally center an element use: margin: 0 auto<br>
+  <b>BUT it only works when the element must display:block, and not float, the width is not auto, and does nothave a fix postition</b></p>
+    <br>
+Box-sizing: 
+<ul>Options
+  <li>content-box: default additive</li>
+  <li>Border-box: width takes content, padding and border into consideration</li>
+</ul>
+  <b>Margin and Padding can neither takes a color (transparent), Can also be define in 1-4 values like border</b>
+  Height and width are additive, i.e. one change influence another.
+<p></p>
+<p>MEASUREMENTS for elements:
+</p><ul>
+  <li>Absolute - set to specific size (px, mm, cm, pt)</li>
+  <li>Fluid - set size relative to surrounding elements:</li> 
+    <ul>
+      <li>%, vw, vh </li>
+      <li>em (for font): 1 em is current size, .75 is 75% of the current size</li>
+      <li>rem (for font): 1 rem is the current size of root element</li>
+    </ul>
+</ul>
+<p></p>
+<h2>7. Styling Links &amp; Lists</h2>
+<section class="half">
+<h3>Styling Links</h3>
+<p>
+  Anchor Links: links can take on all of the usual styles as well as "text-decoration"<br>
+NOTE: the width of the inline element (e.g. link) won't change unless you change its display to block</p>
+<p>
+ Links have different states that may influence styling: 
+ </p><ul>
+   <li>a:link: a normal, unvisited link</li>
+   <li>a:visited: has been visited</li>
+   <li>a:hover: activated by mouse</li>
+   <li>a:focus: activated with the keyboard</li>
+   <li>a:activated: has been clicked</li>
+ </ul> 
+
+ <br><b>RULES OF PRECEDENCE</b><br>
+ 1. a:hover must come after a:link and a:visited<br>
+ 2. a:active must come after a:hover
+<p></p>
+<br>
+<b>Note: Hover is not going to work on tablet and touch screens, so we use focus</b>
+<br><u>Hover: not necessarily works only for links but also paragraphs.</u>
+</section>
+<section class="half">
+<h3>Styling Lists</h3>
+Number of properties beyond font, margin:
+<ul>
+  <li>list-style-type: For order liste: (Lower-roman, upper-roman, decimal, decimal-leading zero, upper-alpha, lower-alpha, hebrew, armenian...)<br>Unordered list (Override the default with circles, discs, or squares</li>
+  <li>list-style-image: use a custom image instead of tradition marker</li>
+  <li>list-style-position</li>
+  <li>list-style</li>
+</ul>
+<br>
+</section>
+
+<section class="whole">
+<br>
+<h2>8. Advanced Selectors </h2>
+<h4>What if we just want to style partially? - Styling specific objects</h4>
+<h5>CSS SELECTORS</h5>
+<p>Some selectors follows the DOM (Document Object Model: browser breaks things up in tree structure)
+<ul>
+  <li>Descendent selectors (nav a): style all of the anchor links inside a nav tag</li>
+  <li>Child selectors (nav &gt a):more constraining, the anchor elements must be a child to the nav, no intermediate tags, e.g. paragraph</li>
+  <li>Adjacent sibling (hl+ol): elements must be at thr same level and follow each other</li>
+</ul>
+</p>
+
+<h5>id SELECTORS (#)</h5>
+<p>#id selector: used to identify a single element in the DOM<br>such as &ltdiv id="header"&gt,&ltdiv id="footer"&gt, etc. Add id="" in html tag and add a # before the id name in CSS</p>
+<h5>class SELECTORS (.)</h5>
+Used to identify an element in the DOM. Add class="" in html and add . before the class name in CSS
+<h5>universal Seclector (*)</h5>
+<h5>attribute Seclector </h5>
+<h5>PSEUDO Selector </h5>
+<br>
+
+<h3>8.0 Shay Howe: READING NOTES</h3>
+<ul>
+  <b>Common Selectors (type, class, ID Selectors)</b>
+  <li>Type selector: identifies an element based on its type</li>
+  <li>Class selector: identifies an element based on class attribute value</li>
+  <li>ID selector: identifies an element based its ID attribute <b>(unique and should only be used once per page)</b></li>
+</ul>
+<br>
+<img src="examples.png" alt="note" width="50%">
+<h3>8.1 Child Selectors</h3>
+<ul>
+  <li><b>Descendant Selector</b>: Select an element that resides anywhere within an identified ancestor element (e.g. article h2, select h2 that falls in the article element - doesn't have to be direct)</li>
+  <br>
+  <li><b>Direct Child Selector</b>: Place an "&gt" sign between the parent and child selector. (e.g.: article &gt p, is a <b>direct</b> child selector only identifying p elements that fall directly within an article element).</li>
+</ul>
+<br>
+<h3>8.2 Sibling Selectors</h3>
+<ul>
+  <b>General Sibling Selector</b>
+  <li>Select elements that share the same parent, the two elements are connected by the tilde (~) character. (e.g. h2 ~ p selects all p elements that follow, and share the same parent, of any h2 elements).</li>
+  <b>Adjacent Sibling Selector</b>
+  <li>Select a sibling element that directly follows after another sibling element. Use a + character between the two sibling elements. (e.g. h2 + p selects p elements directly follow after h2 elements that share a same parent element. </li>
+</ul>
+<br>
+
+<h3>8.3 Attribute Selector</h3>
+<p><b>Attribute Present Selector:</b>To select an element based on if an attribute is present or not, include the attribute name in square 
+<p><b>Attribute Equals Selector:</b>To identify an element with a specific, and exact matching, attribute value</p>
+
+<p><b>Attribute Contains Selector:</b>Can find an element based on part of an attribute value, but not an exact match (use asterisk character, *)</p>
+
+<p><b>Attribute Begins With Selector:</b>Select element based on if an attribute value begins with something (use a circumflex accent ^ right after the attribute name) </p>
+
+<p><b>Attribute Ends With Selector:</b>Select element based on if an attribute value that ends with something (use a dollar sign $ right after the attribute name)</p>
+
+<p><b>Attribute Spaced Selector:</b>At times attribute values may be spaced apart, in which only one of the words needs to be matched in order to make a selection. In this event using the tilde character ~ right after the attribute name.</p>
+<p><b>Attribute Hyphenated Selector:</b>Selects an element if the given attribute value is hyphen-separated and begins with the word stated (use | right after the element name.</p>
+</section>
+
+<section class="week2">
+<h2>9. PSEUDO-CLASSES</h2>
+<p>Pseudo-classes: Begin with the colon character ":"</p>
+<ul>
+  <li>Link Pseudo-classes (define a link has been visited or not): 
+  such as a:link {...} and a:visited: {...}</li>
+  <li>User Action Pseudo-classes: such as a:hover{}, a:active{}, a:focus{}</li>
+  <li>User Interface State Pseudo-Classes: include: enabled, :disabled, :checked, and :indeterminate.</li>
+<br>
+  <li><b>Structural & Position Pseudo-classes:</b></li>
+    <ol>BASED ON PARENT-CHILD
+      <li>:first-child - Select an element that is the first-child within its parent</li>
+      <li>:last-child - Select an element that is the last-child within its parent</li>
+      <li>:only-child - Select an element that is the only-child within its parent</li> (e.g: li: first-child {...})
+    </ol>
+  <br>
+  
+    <ol>BASED ON TYPE
+      <li>:first-of-type (first-of-type pseudo-class will select the <u>first element</u> of its type within a parent)</li>
+      <li>:last-of-type (select the <u>last element</u>of its type within a parent)</li>
+      <li>:only-of-type (select an element if it is the <u>only of its </u>type within a parent)</li>e.g.: p:first-of-type {...}, img:only-of-type {...}
+    </ol>
+    <br>
+    <ol>BASED ON A NUMBER OR AN ALGEBRAIC EXPRESSION
+      <li>:nth-child(n)</li>
+      <li>:nth-last-child(n)</li>
+      <li>:nth-of-type(n)</li>
+      <li>:nth-last-of-type(n)</li>
+    </ol>
+
+<p class="alpha"> e.g.: the li:nth-child(3n) selector will identify every third list item within a list. Using the expression this equates to 3×0, 3×1, 3×2, and so forth. li:nth-child(4n+7) selector will identify every fourth list item starting with the seventh list item. </p>
+<p class="alpha"> The :nth-child(n) works from the beginning of the document tree while the :nth-last-child(n) works from the end of the document tree.</p>
+Example of nth-of-type:
+<br>
+<img src="note3.png" alt="note" width="50%">
+<br>
+<br>
+  <li><b>Target Pseudo-class:</b> The :target pseudo-class is used to style elements when an element’s ID attribute value matches that of the URI fragment identifier. </li><br>
+  <li><b>Empty Pseudo-class:</b> allows elements that do not contain children or text nodes to be selected. </li><br>
+  <li><b>Negation Pseudo-class:</b> ":not(...)" takes an argument which is filtered out from the selection to be made. (e.g. The p:not(.intro) selector uses the negation pseudo-class to identify every paragraph element without the class of intro).</li>
+e.g. : 
+<br>
+<img src="note4.png" alt="note4" width="70%">
+</ul>
+<br>
+</section>
+<section>
+<h2>10. Pseudo-Elements</h2>
+
+<ul>
+  <li><b>Textual Pseudo-elements</b></li>
+    <ol>
+      <li>:first-letter  (identify the first letter of text within an element)</li>
+      <li>:first-line  (identify the first line of text within an element.)</li>
+    </ol>
+  <li><b>Generated Content Pseudo-elements</b></li>
+        <ol>
+          <li>:before (creates a pseudo-element before, or in front of, the selected element)</li>
+          <li>:after  (creates a pseudo-element after, or behind, the selected element)</li>
+        </ol>
+
+<p>e.g.: <br>
+  <b>a:after {<br>
+  color: #9799a7;<br>
+  content: " (" attr(href) ")";<br>
+  font-size: 11px;<br>
+}</b><br>
+will display the exact link address behind (or before) the displayed text.
+</p>
+<li><b>Fragment Pseudo-element</b> (Selects the part of a document which has been selected, or highlighted, by a users’ actions)</li>
+</ul>
+<br>
+
+<p>NOTE: Shorthand Rules: such as writing (border: 1px solid black;)
+<br>instead of: 
+<br>border-width: 1px;<br>
+border-color: black;<br>
+border-style: solid;<br>
+OR:  background: #00ff00 url("imgs/ocean.jpg") no-repeat fixed center;
+<br>i.e. wrting background-color, background-image, background-repeat, and background-position in one line</p>
+
+<h2>11.Browser Prefixes</h2>
+<p>To make sure your stype fit with specific browser: <br>
+-webkit-:Android, Chrome, iOS, Safari<br>
+-moz-:Firefox<br>
+-ms-:Internet Explorer<br>
+-o-:Opera<br>
+</p>
+<p><b>NOTE: Use CANIUSE.COM to find which properties need prefixes</b></p>
+</section>
+
+<div class="bkgpic">
+<h2>***Reading: Using Multiple &lth1&gts </h2>
+<p>
+Use one set of &lth1&gt tags per sectioning root or content section.<br>
+There should always be a &lth1&gt level heading between the opening &ltbody&gt tag and the first content section, to label the overall document.<br>
+When a &lth1&gt level heading is to be used to label a content section, it should be the first heading that appears in the section, because the first heading is always interpreted as the section's label.<br>
+If a &lth1&gt level heading is used to label a content section, any other headings used in that section should be H2 or lower in order to create an accurate document outline.
+</p>
+<a href="https://webdesign.tutsplus.com/articles/the-truth-about-multiple-h1-tags-in-the-html5-era--webdesign-16824">Syntax Structure of Using Tags, esp. headings</a>
+</div>
+
+<h2>12.Setting Background & Gradients</h2>
+<ul>
+  <li><b>Background image</b> - similar tp adding images and urls: <br>
+    div {<br>
+  background-image: url("alert.png");<br>
+}<br>
+  <li><b>Background repeat:</b> By default, a background image will repeat indefinitely, both vertically and horizontally, unless otherwise specified. Therefore "background-repeat" is used to change this (values include: repeat, repeat-x, repeat-y, and no repeat)</li>
+  <li><b>Background-position:</b> requires two values, a horizontal offset (the first value) and a vertical offset (the second value). If only one value is specified, that value is used for the horizontal offset and the vertical offset will default to 50%. <u>(moving the background image from the left top corner of the element, length values specifically will be in relation to that corner)</u></li>
+</ul>
+<p>NOTE: !SHORTHAND! The background-color, background-image, background-position, and background-repeat properties may be rolled up into a shorthand value for the background property alone. The order of these properties commonly falls as background-color, background-image, background-position, and then background-repeat.</p>
+
+<p><b>Details on Background Styling</b><br><a href="https://learn.shayhowe.com/html-css/setting-backgrounds-and-gradients/">Shay Howe's Notes on Background Styling</p></a>
+
+<br>
+
+<h2>13. Transitions</h2>
+<p>Transitions can be used for links, images, etc.</p>
+<ul><b>Transition Properties</b>
+  <li>transition-property: What to change? Size, color, position, etc.)</li>
+  <li>transition-duration: How long the transition lasts?</li>
+  <li>transition-timing: smooth/linear transition or others?</li>
+  <li>transition-delay: waiting time before transition starts</li>
+</ul>
+<br>
+<ol><b>Steps to set up</b>
+  <li>Define the element</li>
+  <li>Choose elements for transition</li>
+  <li>Define new values: MUST BE COMBINED WITH PSEUDO-CLASS</li>
+</ol>
+<br>
+<h2>14. Transform</h2>
+<table>
+  <tbody>
+    <tr><th>2D Transform Options</th><th>3D Rotate</th></tr>
+    <tr><td><b>Translate: </b>Move things up & down <br>(e.g.: transform:translate(x,y))</td><td>N/A</td></tr>
+    <tr><td><b>Rotate:</b> rotate by certain degree <br>(e.g.: transform:rotate(30deg)</td><td><b>Rotate 3d:</b> Along x, y, z axis </td></tr>
+    <tr><td><b>Scale:</b> wider or taller <br>(e.g.: transform:scale(width,height))</td></tr>
+    <tr><td><b>Skew:</b> rotate along x and y axis <br>(e.g.: transform:skew(30deg, 15deg)</td></tr>
+    <tr><td><b>Matrix:</b> combine all of the 2D transform in one, but very confusing</td></tr>
+  </tbody>
+</table>
+<br>
+
+<h2>15.Transitions: Reading Notes</h2>
+<p><b>WAYS TO DETERMINE TRANSITION STATES</b>  :hover, :focus, :active, and :target pseudo-classes</p>
+<br>
+<b>Four Transition Related Properties:</b>
+<ul>
+  <li>transition-property: determine what properties will be affected by transitions. If multiple properties need to be transitioned, use comma separated the values. Or the keyword value 'all' to transition all properties of an element (NOTE: ONLY PROPERTIES WITH IDENTIFIABLE HALF POINT MAY BE TRANSITIONED)
+    <ul>Examples:
+      <li>background-color, background-position</li>
+      <li>border-width, border-spacing, border-color</li>
+      <li>bottom, clip, color, crop, height, width</li>
+      <li>letter-spacing, line-height, margin</li>
+      <li>max-height, max-width, min-width, min-height</li>
+      <li>outline-color, outline-offset, outline-width</li>
+      <li>padding, right, text-indent, text-shadow, top, vertical-align, visibility, word-spacing</li>
+    </ul>
+  </li>
+  <li>transition-duration: could be in second (s) and milliseconds (ms) or .2s, .5s etc.</li>
+  <li>transition-timing-function: set the speed of the transiton movement. <br>
+
+<p><b>Values</b></p>
+    <ul>
+      <li>linear: transition will move in a constant speed from one to another</li>
+      <li>ease-in: starts slowly and speeds throughout transition</li>
+      <li>ease-out: starts quickly and slows down throughout</li>
+      <li>ease-in-out: starts slowly, speeds up to a middle point, and slows down ahain</li>
+  <li>transition-delay: set s or ms before the transition starts</li>
+</ul>
+<p>NOTE: SHORTHANDS: To set numerous transitions at once, set each individual group of transition values, then use a comma to separate each additional group of transition values.</p>
+<p>Transitions often need Vendor Prefixes: 
+<br><img src="prefixes.png" alt="note5" width="40%">
+
+<h2>16. Animation</h2>
+
+<h2>17. Positioning</h2>
+<p><b>Four Positioning Properties:</b> Static, Relative, Absolute, Fixed.<br>
+Positions are modified by properties: top/right/bottom/left.</p>
+<br>
+<ul><b>Positioning properties:</b>
+  <li><u>Static:</u> is the default value for elements,it simply places things in the next available position, and not affected by top/left/bottom/right properties</li>
+  <li><u>Relative:</u>aka. "relative to itself", take static positions, but add offsets - relatively move things</li>
+  <li><u>Absolute:</u>element is removed from the document flow and positioned relative to it's nearest ancestor or root. NOTE: other elements behave as if element does not exist.</li>
+  <li><u>Fixed:</u>Relative to the browers window. Will not move, even if the window is scrolled (just like the pop-up/navigation bar that never leave the page!!)</li>
+</ul>
+<p><b>Z-INDEX</b>  Can make multiple elements placed in the same position. it uses a positive or negative number to dictates stacking order.</p>
+
+<h2>18. Styling Tables & Creating Navigation Menus</h2>
+<p>Accessibility: 
+  <br>1. headings should always follow hierachy, never use a tag because of the style of it, if you want the look of h2 heading-then style it in CSS!<br>2. Off-page headings: .offpage could be useful when you want to give SR users a navigation aid without cluttering presenatation. Use CSS to position headings off-page.
+</p>
+
+<br>
+
+<footer class="animate">
+  <small>© zxu</small>
+</footer>
+<a href="https://zihanxu.net">my portfolio</a>
+
+<header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="me.html" class="current">Me</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="progress.html">Progress</a>
+    <a href="chat.html">Chat</a>
+  </nav>
+
+</header>
+
+<br>
+
+<button><a href="mailto:hihi@awesome.com?subject=Reaching%20Out&amp;body=How%20are%20you">Email Me</a></button>
+
+</html>
