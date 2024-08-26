@@ -1,1 +1,254 @@
+<head>
+  <meta charset="UTF-8">
+  <title>study notes</title>
+  <!-- css/stylepractice.css -->
+  <link rel="stylesheet" href="CSS/style1.css">
+</head>
+
+<header class="main">
+<nav>
+  <a href="notes.html" class="active">HTML</a>
+  <a href="cssnote.html">CSS</a> 
+    <a href="javanote.html">Java Script</a>
+    <a href="TBD.html">Responsive Design</a>
+    <a href="python.html">Python</a>
+  </nav>
+
+</header>
+
+<header>
+  <h1>COURSE I: Intro to HTML</h1>
+  <h3>This will be used as a note to keep track of my learning progress</h3>
+</header>
+
+<body>
+  <h2>Week 2: Learning the very basics</h2>
+  <p> I have learnt some structure-based elements such as: HEADER, NAVIGATION, ARTICLE, SECTION, ASIDE, FOOTER</p>
+
+
+    <h5>I hope this is going to work</h5>
+    <p><u>Some notes: Block-level elements vs. Inline-level elements</u></p>
+    <p>Block-level elements starts off on a new line, occupy any avaiable page width. Inline-level elements: exist in the normal flow of a line</p>
+
+
+<section class="week1">
+<h2>1. Experimenting with Lists</h2>
+
+<h4>This is an ordered-list</h4>
+<ol>
+  <li>Start Attribute</li>
+  <li>Value</li>
+  <li>Reversed Attribute</li>
+</ol>
+<h5>Sample Experiements with Different Attributes</h5>
+<ol reversed="3">
+  <li start="2">Start Attribute</li>
+  <li>Value</li>
+  <li value="9">Reversed Attribute</li>
+</ol>
+
+
+<h4>This is an unordered-list</h4>	
+<ul>
+  <li>List-style-tpye property</li>
+  <li>how to use an image as background???</li>
+  <li>How does it work in CSS??</li>
+</ul>
+
+<h4>This is a descriptive list</h4> 
+
+<dl>
+  <dt>Descriptive List</dt>
+  <dd>uses dl as tag</dd>
+  <dt>DT</dt>
+  <dd>descriptive term element</dd>
+  <dt>DD</dt>
+  <dd>descriptive element</dd>
+</dl>
+
+<h4>This is a nesting list</h4> 
+<ol>
+  <li>Unordered list uses ul tag</li>
+  <li>ordered list uses ol tag</li>
+  <li>
+    Descriptive list uses dl as tag and the following two elements:
+    <ul>
+      <li>dt: descriptive term element</li>
+      <li>dd: descriptive element</li>
+    </ul>
+  </li>
+  <li>Nesting list</li>
+</ol>
+</section>
+
+<section>
+<div class="aside">
+  <h2>2. Adding Images</h2>
+  <p>NOTE: image element is self-containing and empty, it doesn’t wrap any other content and it exists as a single tag. a src attribute and value must be included to specify the source of the image. The src attribute value is a URL, relative to the server where a website is hosted.</p>
+  <img src="Document-Journal_Lucia-Moholy-Nagy_02-258x300.jpg" alt="Lucia Moholy's black and white photography" title="my favorite photography-!only displays on hover!">
+  <img src="Document-Journal_Lucia-Moholy-Nagy_02-258x300.jpg" width="50%" alt="Lucia Moholy's black and white photography" title="my favorite photography-!only displays on hover!">
+  <img src="Document-Journal_Lucia-Moholy-Nagy_02-258x300.jpg" width="50px" alt="Lucia Moholy's black and white photography" title="my favorite photography-!only displays on hover!">
+  <ol> WAYS TO ADJUST IMAGE SIZE:
+  <li> adjust width by percentage, the image with adjust size along with the browser screen size</li>
+  <li>adjust by width: the image size is fixed and will keep its proportion</li>
+  <li>adjust by both height and width</li>
+  </ol>
+  <p>Image formats: png for logos and icons, jpg for photography,better quality</p>
+</div>
+</section>
+
+  <h2>3. Table For Data</h2>
+  <table class="seasons">
+    <caption>EVERYTHING TAKES TIME</caption>
+    <thead>
+    <tr>
+      <th scope="col">SEASON</th>
+      <th scope="col">MONTHS</th>
+      <th scope="col">DAYS</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <td>Summer</td>
+      <td>*June - August*<span>in july we started to walk together</span></td>
+      <td>103 days</td>
+    </tr>
+    <tr>
+      <td>Spring</td>
+      <td>March - May</td>
+      <td>125 days</td>
+    </tr>
+    <tr>
+      <td>Winter</td>
+      <td>Endless</td>
+      <td>1001 days</td>
+    </tr>
+     <tr>
+      <td>Autumn</td>
+      <td>The best</td>
+      <td>11 days</td>
+    </tr>
+
+    </tbody>
+
+    <tfoot>
+    <tr>
+      <td>this</td>
+      <td>is</td>
+      <td>foot</td>
+    </tr>
+    </tfoot>
+  </table>
+ <br>
+ <p> ROWSPAN and COLSPAN are attributes for combining multiple cells, Border Attribute: use border attribute in table tag. Caption</p>
+
+<table border="1">
+  <tbody><tr><th>Name</th><th>Guests' Name</th></tr>
+  <tr><td rowspan="2">Natalie</td><td>Anne Baier</td></tr>
+  <tr><td>Andrew Colbalt</td></tr>
+</tbody></table>
+
+
+
+<table>
+  <tbody><tr><th>ROW 1</th><th>ROW 2</th><th>ROW 3</th></tr>
+  <tr><td>1</td><td>2</td><td>3</td></tr>
+  <tr><td>4</td><td>5</td><td>6</td></tr>
+  <tr><td>9</td><td>9</td><td>7</td></tr>
+</tbody></table>
+
+      
+      
+        
+          <!-- 2ab46702aa -->
+          <script src="https://kit.fontawesome.com/2ab46702aa.js" crossorigin="anonymous"></script>
+        
+
+        <br>
+        <h2>4. Hyperlink </h2>
+        <p>Tag &lt;a&gt; stands for Anchor Link，href stands for hyper-reference and content: the clickable part.</p>
+
+          <ol>Types of Links: NOTE: Never include link names that is local to your machine!
+            <li>Absolute link: needs a fully formed URL-Other's links</li>
+            <li>Relative link: link to a local file in the same folder-your own website eg. <a href="first.page.html">Inside the local folder</a></li>
+            <img src="note1.png" alt="Different types of relative links" width="30%">
+            <li>Internal link: use HASHTAG</li>
+            <li>Graphic link</li>
+          </ol>
+          <br>
+          <h2>5. How to Use <a href="https://fontawesome.com/start">FontAwsome</a></h2>
+          <h4>Note: aria-label will add text descriptions on hover</h4>
+       
+        
+          <i class="fab fa-android" aria-hidden="true"></i>
+          <i class="fab fa-android fa-md" aria-hidden="true"></i>
+          <i class="fab fa-android fa-lg" aria-hidden="true"></i>
+          <i class="fab fa-android fa-2x" aria-hidden="true"></i>
+          <i class="fab fa-android fa-3x" aria-hidden="true"></i>
+
+         <a href="http://zihanxu.net" aria-label="Portfolio"><i class="fas fa-guitar fa-3x" aria-hidden="true"></i></a>
+        
+
+        <br>
+       <h2>6. Useful Tags</h2>
+      <ul>
+        <li>Generic: &lt;p&gt;,&lt;div&gt;</li>
+        <li>Semantic: &lt;header&gt;, &lt;nav&gt;, &lt;footer&gt;,&lt;figure&gt;</li>
+        <li>Block tags <ul><li>Containers:article, aside,section, main...</li><li>&lt;hr&gt;:horizontal rule (deson't contains any text</li><li>&lt;address&gt;: used to write address</li><li>&lt;blockquote&gt;: used to write quotes</li><li>&lt;detail&gt; with &lt;summary&gt;: create open-close expanding contents (but is not supported in firefox</li>
+        </ul>
+        <br>
+        <h4>Inline Tags</h4>
+         <ul>
+          <li>&lt;span&gt;: was the original inline tag for plain texts</li><li>Cite, abbr, time (let browers know and mark up that something is time info), code, sub and sup</li><li>Others: meter, etc.<meter min="0" max="100" value="66">66%</meter></li>
+          </ul>
+
+        <br>
+        <h2>7. Validate Sites</h2>
+        <p>Validate by URI/File Upload/Direct Input. TO VALIDATE SYNTAX: validator.w3.org. 
+          TO CHECK ACCESSIBILITY: wave.webaim.org OR Funkify
+        </p>
+        <br>
+        <h2>8. Detail Summary Tab</h2>
+        <details open=""><summary>Examples</summary>
+        I am writing this as an example, this folding function doesn't work in Firefox.</details>
+      
+
+
+<br>
+
+<script>
+  prompt("Enter your secret");
+</script>
+
+
+<h4><a href="navigationsample.html">NAVIGATION MENU SAMPLE - VERTICAL</a></h4>
+
+<h4><a href="navigationsample-h.html">NAVIGATION MENU SAMPLE - HORIZONTAL</a></h4>
+
+<h4><a href="navigationsample-d.html">NAVIGATION MENU SAMPLE - DROP DOWM MENU</a></h4>
+
+  <footer class="animate">
+  <small>© zxu</small>
+</footer>
+<a href="https://zihanxu.net">my portfolio</a>
+
+<header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="me.html" class="current">Me</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="progress.html">Progress</a>
+    <a href="chat.html">Chat</a>
+  </nav>
+
+</header>
+
+<br>
+
+<button><a href="mailto:hihi@awesome.com?subject=Reaching%20Out&amp;body=How%20are%20you">Email Me</a></button>
+
+</html>
+
+
 
